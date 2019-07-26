@@ -10,7 +10,7 @@ set('application', 'wft');
 set('repository', 'git@github.com:my110110/laravel_blog.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true); 
+set('git_tty', true);
 
 // Shared files/dirs between deploys 
 add('shared_files', []);
@@ -22,15 +22,19 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('106.13.103.43')
-    ->set('deploy_path', '~/{{application}}');    
+host('root@106.13.103.43')
+    ->set('deploy_path', '/var/www/{{application}}');
     
 // Tasks
 
 task('build', function () {
     run('cd {{release_path}} && build');
 });
+task('chmod', function () {
+    run('chmod -R 777 {{deploy_path}}');
+});
 
+after('deploy:update_code', 'chmod');
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 

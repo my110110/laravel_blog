@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="35a97939-7a4c-462c-a32f-2b992682506b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TestController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deploy.php" beforeDir="false" afterPath="$PROJECT_DIR$/deploy.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            <state relative-caret-position="324">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -49,6 +49,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>repositories</find>
+      <find>deploy</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -262,19 +263,21 @@
       <workItem from="1560821429819" duration="4515000" />
       <workItem from="1563157832410" duration="3009000" />
       <workItem from="1564015808705" duration="3311000" />
-      <workItem from="1564101083745" duration="3898000" />
+      <workItem from="1564101083745" duration="9773000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63669000" />
+    <option name="totallyTimeSpent" value="69544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22114347" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -653,8 +656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/deploy.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+        <state relative-caret-position="324">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
         </state>
       </provider>
     </entry>
