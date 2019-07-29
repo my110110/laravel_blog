@@ -13,6 +13,3 @@
 Route::get('test-index', 'TestController@index')->name('test-index');
 Route::get('test-send', 'TestController@send')->name('test-send');
 Route::get('test-back', 'TestController@back')->name('test-back');
-Route::get('/', function () {
-    return view('welcome');
-});
