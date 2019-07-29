@@ -9,6 +9,9 @@ set('application', 'wft');
 // Project repository
 set('repository', 'git@github.com:my110110/laravel_blog.git');
 
+
+set('writable_mode','chown');
+
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true);
 
@@ -19,10 +22,12 @@ add('shared_dirs', []);
 // Writable dirs by web server 
 add('writable_dirs', []);
 
-
 // Hosts
 
-host('root@106.13.103.43')
+host('106.13.103.43')
+    ->user('root')
+    ->port(22)
+    ->identityFile('~/.ssh/id_rsa')
     ->set('deploy_path', '/var/www/{{application}}');
     
 // Tasks
@@ -30,11 +35,7 @@ host('root@106.13.103.43')
 task('build', function () {
     run('cd {{release_path}} && build');
 });
-task('chmod', function () {
-    run('chmod -R 777 {{deploy_path}}');
-});
 
-after('deploy:update_code', 'chmod');
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
