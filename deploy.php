@@ -39,7 +39,6 @@ task('set:repo',function (){
     run('cd {{release_path}} | composer config -g repo.packagist composer https://packagist.phpcomposer.com');
 });
 before('deploy:vendors', 'set:repo');
-after('deploy:update_code', 'chmod');
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
