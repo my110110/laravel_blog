@@ -2,7 +2,9 @@
 namespace Deployer;
 
 require 'recipe/laravel.php';
-
+set('env', [
+    'VARIABLE' => 'value',
+]);
 // Project name
 set('application', 'wft');
 
@@ -42,5 +44,5 @@ after('deploy:failed', 'deploy:unlock');
 
 // Migrate database before symlink new release.
 
-before('deploy:symlink', 'artisan:migrate');
+//before('deploy:symlink', 'artisan:migrate');
 
