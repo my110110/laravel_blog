@@ -49,12 +49,12 @@ return [
         
             'factory_class' => Enqueue\AmqpLib\AmqpConnectionFactory::class,
         
-            'host' => env('RABBITMQ_HOST', '127.0.0.1'),
+            'host' => env('RABBITMQ_HOST', '106.13.103.43'),
             'port' => env('RABBITMQ_PORT', 5672),
         
             'vhost' => env('RABBITMQ_VHOST', '/'),
-            'login' => env('RABBITMQ_LOGIN', 'guest'),
-            'password' => env('RABBITMQ_PASSWORD', 'guest'),
+            'login' => env('RABBITMQ_LOGIN', ''),
+            'password' => env('RABBITMQ_PASSWORD', ''),
         
             'queue' => env('RABBITMQ_QUEUE', 'default'),
         
@@ -119,14 +119,7 @@ return [
              * Using an SSL connection will also require to configure your RabbitMQ to enable SSL. More details can be founds here: https://www.rabbitmq.com/ssl.html
              */
         
-            'ssl_params' => [
-                'ssl_on' => env('RABBITMQ_SSL', false),
-                'cafile' => env('RABBITMQ_SSL_CAFILE', null),
-                'local_cert' => env('RABBITMQ_SSL_LOCALCERT', null),
-                'local_key' => env('RABBITMQ_SSL_LOCALKEY', null),
-                'verify_peer' => env('RABBITMQ_SSL_VERIFY_PEER', true),
-                'passphrase' => env('RABBITMQ_SSL_PASSPHRASE', null),
-            ],
+
     
         ],
         'sync' => [
