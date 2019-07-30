@@ -37,9 +37,11 @@ host('106.13.103.43')
 task('build', function () {
     run('cd {{release_path}} && build');
 });
+task('key:generate',function (){
+    run('cd {{release_path}} && php artisan key:generate');
+});
 
-
-
+after('deploy:migrate','key:generate');
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
