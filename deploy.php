@@ -9,6 +9,7 @@ set('application', 'wft');
 // Project repository
 set('repository', 'git@github.com:my110110/laravel_blog.git');
 
+set('composer_options', '{{composer_action}} --verbose --prefer-dist --no-progress --no-interaction --optimize-autoloader --no-suggest');
 
 set('writable_mode','chown');
 
@@ -35,10 +36,7 @@ task('build', function () {
     run('cd {{release_path}} && build');
 });
 
-task('set:repo',function (){
-    run('cd {{release_path}} | composer config -g repo.packagist composer https://packagist.phpcomposer.com');
-});
-before('deploy:vendors', 'set:repo');
+
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
