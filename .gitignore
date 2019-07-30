@@ -18,4 +18,5 @@ webpack.mix.js
 yarn.lock
 .idea
 .env
+.env.example
 

@@ -23,7 +23,7 @@ add('shared_files', []);
 add('shared_dirs', []);
 set('writable_mode', 'chown');
 // Writable dirs by web server 
-add('writable_dirs', []);
+add('writable_dirs', ['storage']);
 
 // Hosts
 
