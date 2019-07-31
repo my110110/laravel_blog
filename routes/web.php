@@ -10,6 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('test-index', 'TestController@index')->name('test-index');
-Route::get('test-send', 'TestController@send')->name('test-send');
+Route::get('category-index', 'CategoryController@index')->name('category-index');
+Route::get('category-store', 'CategoryController@store')->name('category-store');
 Route::get('test-back', 'TestController@back')->name('test-back');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -10,8 +10,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Test extends Model
+class Category extends Model
 {
-    protected $table = 'test1';
+    protected $table = 'category';
     public $timestamps = false;
 }

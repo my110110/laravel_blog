@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Jobs\TestQueue;
-use App\Models\Test;
+use App\Jobs\CategoryQueue;
+use App\Models\Category;
 use Illuminate\Console\Command;
 
 class TestCommand extends Command

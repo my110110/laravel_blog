@@ -2,26 +2,26 @@
 
 namespace App\Jobs;
 
-use App\Models\Test;
+use App\Models\Category;
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 
-class TestQueue implements ShouldQueue
+class CategoryQueue implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    protected $test;
+    protected $quest;
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct(Test $test)
+    public function __construct(array $data)
     {
-        $this->test = $test;
+       $this->quest = $data;
     }
 
     /**
@@ -31,8 +31,7 @@ class TestQueue implements ShouldQueue
      */
     public function handle()
     {
-        $this->test->do = 1;
-        $this->test->status = 2;
-        $this->test->save();
+        
+        Category::create($this->quest);
     }
 }
