@@ -31,7 +31,7 @@ class CategoryQueue implements ShouldQueue
      */
     public function handle()
     {
-        $a =2;
+        $a =3;
         Category::create($this->quest);
     }
 }
