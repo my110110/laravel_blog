@@ -8,9 +8,9 @@
 
 namespace App\Http\Controllers;
 use App\Handlers\Category\StoreHandler;
-use App\Jobs\CategoryQueue;
 use \Illuminate\Http\Request;
-use Illuminate\Support\Facades\App;
+use PhpAmqpLib\Connection\AMQPStreamConnection;
+use PhpAmqpLib\Message\AMQPMessage;
 
 class CategoryController extends Controller
 {
@@ -18,8 +18,10 @@ class CategoryController extends Controller
     
     public function index(Request $request)
     {
-        $data = $request->all();
-        $this->dispatch(new CategoryQueue($data));
+        $redis = app(AMQPMessage::class);
+        $connection = app(AMQPStreamConnection::class);
+        print_r($connection);die;
+        $redis->publish('category',json_encode(['name'=>'c','pid'=>13]));
     }
     
     
