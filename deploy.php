@@ -42,9 +42,9 @@ task('key:generate',function (){
 });
 //composer config repo.packagist composer https://packagist.phpcomposer.com
 task('composer:repo',function (){
-    run('cd {{release_path}} && composer config repo.packagist composer https://packagist.phpcomposer.com');
+    run('cd {{release_path}} && composer config  repo.packagist composer https://packagist.phpcomposer.com');
 });
-before('deploy:vendors','composer:repo');
+//before('deploy:vendors','composer:repo');
 after('artisan:migrate','key:generate');
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
