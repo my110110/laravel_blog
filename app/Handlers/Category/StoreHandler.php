@@ -8,7 +8,6 @@
 
 namespace App\Handlers\Category;
 use App\Jobs\CategoryQueue;
-use App\Models\Category;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use \Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
